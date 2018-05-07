@@ -1,24 +1,33 @@
-# README
+# with this simple JSON API you can:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. **POST** a new page to store its contents with:
 
-Things you may want to cover:
+```
+curl -i \
+  -H "Accept: application/vnd.api+json" \
+  -H 'Content-Type:application/vnd.api+json' \
+  -X POST
+  -d '{"data": {"type":"page_contents", "attributes":{"url":"http://motherfuckingwebsite.com/"}}}'
+  http://localhost:3000/page-contents
+```
 
-* Ruby version
+2. you can also **GET** all the information stored so far with:
 
-* System dependencies
+```
+curl -i \
+  -H "Accept: application/vnd.api+json" \
+  http://localhost:3000/page-contents
+```
 
-* Configuration
+**NOTES**:
 
-* Database creation
+1. content is stored in the following format
 
-* Database initialization
+```
+# text inside <h1></h1> labels
+## text inside <h2></h2> labels
+### text inside <h3></h3> labels
+[href value of <a> lable]
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2. please read [[Notes.md]] for some explanation about the completion of this project

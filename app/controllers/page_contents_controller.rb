@@ -1,0 +1,3 @@
+class PageContentsController < ApplicationController
+
+end
