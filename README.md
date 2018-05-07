@@ -7,6 +7,6 @@ curl -i \
   -H "Accept: application/vnd.api+json" \
   -H 'Content-Type:application/vnd.api+json' \
   -X POST
-  -d '{"data": {"type":"page_contents", "attributes":{"url":"http://www.uh.cu"}}}'
+  -d '{"data": {"type":"page_contents", "attributes":{"url":"http://motherfuckingwebsite.com/"}}}'
   http://localhost:3000/page-contents
 ```
