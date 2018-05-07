@@ -30,4 +30,4 @@ curl -i \
 [href value of <a> lable]
 ```
 
-2. please read [Notes.md] for some explanation about the completion of this project
+2. please read [Notes.md](Notes.md) for some explanation about the completion of this project
