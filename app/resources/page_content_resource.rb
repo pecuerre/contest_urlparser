@@ -1,13 +1,20 @@
 class PageContentResource < JSONAPI::Resource
-    immutable
+    #immutable
 
     attributes :url, :content
 
-    def self.updateble_fields
+    before_save :fetch_content
+
+    def self.updateble_fields(context)
         super - [:content]
     end
 
-    def self.creatable_fields
+    def self.creatable_fields(context)
         super - [:content]
     end
+
+    def fetch_content
+        self.content = "something"
+    end
 end
+

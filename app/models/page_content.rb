@@ -1,4 +1,4 @@
 class PageContent < ApplicationRecord
     validates :url, :presence => true
-    valdiates :url, :uniqueness => true
+    validates :url, :uniqueness => true
 end
